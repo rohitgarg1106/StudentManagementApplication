@@ -34,3 +34,8 @@ GRANT CREATE USER ON *.* TO 'root'@'%';
 
 <img width="758" alt="image" src="https://user-images.githubusercontent.com/109075813/181714532-9af76ad5-e573-453e-889b-4bbed2f2c6c8.png">
 
+### StudentDB Schema
+
+<img width="758" alt="image" src="https://user-images.githubusercontent.com/109075813/181715046-d12a0bff-0f3e-4ba1-bdac-5b81f7d6e068.png">
+
+
