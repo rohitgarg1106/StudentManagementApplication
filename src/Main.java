@@ -70,6 +70,11 @@ public class Main {
 
             } else if (userInput == 4) {
 
+                if(StudentDAO.showAllStudents()){
+
+                }else{
+                    System.out.println(">>Error occurred");
+                }
             }
             else if(userInput == 5){
                 System.out.println("\nProgram exiting successfully...\n");

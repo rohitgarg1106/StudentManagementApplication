@@ -2,6 +2,7 @@ package Student;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class StudentDAO {
 
@@ -72,4 +73,32 @@ public class StudentDAO {
 
         return false;
     }
+
+    public static boolean showAllStudents() {
+
+        try{
+            Connection con = StudentConnection.createConnection();
+            String query = "select * from students limit 100";
+
+            //Prepared Statement
+            PreparedStatement stmt = con.prepareStatement(query);
+            ResultSet resultSet = stmt.executeQuery();
+
+            while(resultSet.next()){
+                System.out.println("ID: " + resultSet.getString(1));
+                System.out.println("NAME: " + resultSet.getString(2));
+                System.out.println("PHONE: " + resultSet.getString(3));
+                System.out.println("CITY: " + resultSet.getString(4));
+                System.out.println("===========================");
+            }
+
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
 }
