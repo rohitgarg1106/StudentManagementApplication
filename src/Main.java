@@ -31,13 +31,42 @@ public class Main {
                 if(StudentDAO.insertStudentToDB(student)){
                     System.out.println(">>Inserted record successfully");
                 }else{
-                    System.out.println(">>Record insertion failed1");
+                    System.out.println(">>Record insertion failed");
                 }
             }
             else if(userInput == 2){
-                
+                System.out.println(">>Enter student id");
+                int studentId = Integer.parseInt(sc.nextLine());
+
+                if(StudentDAO.deleteStudentFromDB(studentId)){
+                    System.out.println(">>Deleted record successfully");
+                }else{
+                    System.out.println(">>Record deletion failed");
+                }
+
             }
             else if(userInput == 3){
+                System.out.println("Enter new student details:\n");
+
+                System.out.println(">>Enter new student id");
+                int studentId = Integer.parseInt(sc.nextLine());
+
+                System.out.println(">>Enter new student name");
+                String studentName = sc.nextLine();
+
+                System.out.println(">>Enter new student phone");
+                String studentPhone = sc.nextLine();
+
+                System.out.println(">>Enter new student city");
+                String studentCity = sc.nextLine();
+
+                Student newStudent = new Student(studentName, studentPhone,studentCity);
+
+                if(StudentDAO.updateStudentInDB(studentId, newStudent)){
+                    System.out.println(">>Updated record successfully");
+                }else{
+                    System.out.println(">>Record updation failed");
+                }
 
             } else if (userInput == 4) {
 
