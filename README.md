@@ -31,3 +31,6 @@ GRANT CREATE USER ON *.* TO 'root'@'%';
 ```
 
 ### Run main() method from Main.java
+
+<img width="758" alt="image" src="https://user-images.githubusercontent.com/109075813/181714532-9af76ad5-e573-453e-889b-4bbed2f2c6c8.png">
+
