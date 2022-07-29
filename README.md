@@ -1,6 +1,6 @@
 # StudentManagementApplication
 
-Student Management CrUD Application using Java, JDBC and MySQL on Docker
+Student Management CRUD Application using Java, JDBC and MySQL on Docker
 
 # MySQL Docker Connection
 
